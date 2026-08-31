@@ -1,0 +1,35 @@
+[project]
+name = "agenteval"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Adam", email = "Adamsaulters@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.141.1",
+    "numpy>=2.5.2",
+    "pydantic>=2.13.5",
+    "pytest>=9.1.1",
+    "requests>=2.34.2",
+    "statsmodels>=0.15.0",
+    "uvicorn>=0.52.4",
+]
+
+[project.scripts]
+agenteval = "agenteval:main"
+
+[build-system]
+requires = ["uv_build>=0.12.7,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv.workspace]
+members = [
+    "agenteval",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
