@@ -75,4 +75,4 @@ class ScenarioResult(BaseModel):
     agent_response: AgentResponse
     judge_reasoning: Optional[str] = None
     run_index: int = 0
-    cost_usd: Optional[float] = None
+    cost_usd: Optional[float] = None 
