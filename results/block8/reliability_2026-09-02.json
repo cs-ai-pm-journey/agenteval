@@ -1,0 +1,188 @@
+{
+  "run_id": "reliability-2026-09-02",
+  "adapter": "BlockEightCopilotAdapter",
+  "endpoint": "https://smart-reply-copilot.onrender.com/api/process",
+  "golden_set_version": "v1",
+  "k": 8,
+  "n_scenarios": 28,
+  "pass_k_rate": 0.35714285714285715,
+  "ci_95": [
+    0.2070582950773768,
+    0.541696934855722
+  ],
+  "flaky_scenario_ids": [
+    "b8-ambig-006",
+    "b8-multi-006"
+  ],
+  "duration_seconds": 1096.0426139831543,
+  "per_scenario": {
+    "b8-ambig-001": {
+      "k": 8,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "pass_k": false
+    },
+    "b8-ambig-002": {
+      "k": 8,
+      "successes": 8,
+      "pass_rate": 1.0,
+      "pass_k": true
+    },
+    "b8-ambig-003": {
+      "k": 8,
+      "successes": 8,
+      "pass_rate": 1.0,
+      "pass_k": true
+    },
+    "b8-ambig-004": {
+      "k": 8,
+      "successes": 8,
+      "pass_rate": 1.0,
+      "pass_k": true
+    },
+    "b8-ambig-005": {
+      "k": 8,
+      "successes": 8,
+      "pass_rate": 1.0,
+      "pass_k": true
+    },
+    "b8-ambig-006": {
+      "k": 8,
+      "successes": 2,
+      "pass_rate": 0.25,
+      "pass_k": false
+    },
+    "b8-abstain-001": {
+      "k": 8,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "pass_k": false
+    },
+    "b8-abstain-002": {
+      "k": 8,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "pass_k": false
+    },
+    "b8-ambig-007": {
+      "k": 8,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "pass_k": false
+    },
+    "b8-ambig-008": {
+      "k": 8,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "pass_k": false
+    },
+    "b8-ambig-009": {
+      "k": 8,
+      "successes": 8,
+      "pass_rate": 1.0,
+      "pass_k": true
+    },
+    "b8-abstain-003": {
+      "k": 8,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "pass_k": false
+    },
+    "b8-abstain-004": {
+      "k": 8,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "pass_k": false
+    },
+    "b8-abstain-005": {
+      "k": 8,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "pass_k": false
+    },
+    "b8-ambig-010": {
+      "k": 8,
+      "successes": 8,
+      "pass_rate": 1.0,
+      "pass_k": true
+    },
+    "b8-ambig-011": {
+      "k": 8,
+      "successes": 8,
+      "pass_rate": 1.0,
+      "pass_k": true
+    },
+    "b8-ambig-012": {
+      "k": 8,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "pass_k": false
+    },
+    "b8-abstain-006": {
+      "k": 8,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "pass_k": false
+    },
+    "b8-abstain-007": {
+      "k": 8,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "pass_k": false
+    },
+    "b8-abstain-008": {
+      "k": 8,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "pass_k": false
+    },
+    "b8-abstain-009": {
+      "k": 8,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "pass_k": false
+    },
+    "b8-abstain-010": {
+      "k": 8,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "pass_k": false
+    },
+    "b8-multi-001": {
+      "k": 8,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "pass_k": false
+    },
+    "b8-multi-002": {
+      "k": 8,
+      "successes": 0,
+      "pass_rate": 0.0,
+      "pass_k": false
+    },
+    "b8-multi-003": {
+      "k": 8,
+      "successes": 8,
+      "pass_rate": 1.0,
+      "pass_k": true
+    },
+    "b8-multi-004": {
+      "k": 8,
+      "successes": 8,
+      "pass_rate": 1.0,
+      "pass_k": true
+    },
+    "b8-multi-005": {
+      "k": 8,
+      "successes": 8,
+      "pass_rate": 1.0,
+      "pass_k": true
+    },
+    "b8-multi-006": {
+      "k": 8,
+      "successes": 7,
+      "pass_rate": 0.875,
+      "pass_k": false
+    }
+  }
+}
