@@ -1,0 +1,753 @@
+{
+  "run_id": "coverage-2026-09-02",
+  "adapter": "BlockEightCopilotAdapter",
+  "endpoint": "https://smart-reply-copilot.onrender.com/api/process",
+  "golden_set_version": "v1",
+  "total_scenarios": 50,
+  "results_summary": {
+    "pass_rate": 0.66,
+    "ci_95": [
+      0.521538260502326,
+      0.775630507774999
+    ],
+    "by_case_type": {
+      "normal": {
+        "pass_rate": 1.0,
+        "ci_95": [
+          0.8513451253913791,
+          1.0
+        ],
+        "n": 22
+      },
+      "ambiguous": {
+        "pass_rate": 0.5833333333333334,
+        "ci_95": [
+          0.31951131254954973,
+          0.8067396863412435
+        ],
+        "n": 12
+      },
+      "should_abstain": {
+        "pass_rate": 0.0,
+        "ci_95": [
+          0.0,
+          0.27753279986288926
+        ],
+        "n": 10
+      },
+      "multi_intent": {
+        "pass_rate": 0.6666666666666666,
+        "ci_95": [
+          0.29999331513839184,
+          0.9032285888942195
+        ],
+        "n": 6
+      }
+    }
+  },
+  "duration_seconds": 240.4959099292755,
+  "latency_p50_ms": 4706.521987915039,
+  "latency_p95_ms": 6345.787763595581,
+  "individual_results": [
+    {
+      "scenario_id": "b8-normal-001",
+      "passed": true,
+      "expected": {
+        "category": "Bug Report"
+      },
+      "actual": {
+        "category": "Bug Report",
+        "tone": "apologetic",
+        "urgency": "high"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 4332.7038288116455
+    },
+    {
+      "scenario_id": "b8-normal-002",
+      "passed": true,
+      "expected": {
+        "category": "Bug Report"
+      },
+      "actual": {
+        "category": "Bug Report",
+        "tone": "apologetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 4690.5670166015625
+    },
+    {
+      "scenario_id": "b8-normal-003",
+      "passed": true,
+      "expected": {
+        "category": "Bug Report"
+      },
+      "actual": {
+        "category": "Bug Report",
+        "tone": "apologetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 5276.339054107666
+    },
+    {
+      "scenario_id": "b8-normal-004",
+      "passed": true,
+      "expected": {
+        "category": "Feature Request"
+      },
+      "actual": {
+        "category": "Feature Request",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.8666666666666666,
+      "latency_ms": 5039.191007614136
+    },
+    {
+      "scenario_id": "b8-normal-005",
+      "passed": true,
+      "expected": {
+        "category": "Feature Request"
+      },
+      "actual": {
+        "category": "Feature Request",
+        "tone": "empathetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.8666666666666666,
+      "latency_ms": 5352.163076400757
+    },
+    {
+      "scenario_id": "b8-normal-006",
+      "passed": true,
+      "expected": {
+        "category": "Billing Issue"
+      },
+      "actual": {
+        "category": "Billing Issue",
+        "tone": "apologetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 4799.891948699951
+    },
+    {
+      "scenario_id": "b8-normal-007",
+      "passed": true,
+      "expected": {
+        "category": "Billing Issue"
+      },
+      "actual": {
+        "category": "Billing Issue",
+        "tone": "apologetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.8666666666666666,
+      "latency_ms": 4195.360898971558
+    },
+    {
+      "scenario_id": "b8-normal-008",
+      "passed": true,
+      "expected": {
+        "category": "Technical Support"
+      },
+      "actual": {
+        "category": "Technical Support",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 3785.219192504883
+    },
+    {
+      "scenario_id": "b8-normal-009",
+      "passed": true,
+      "expected": {
+        "category": "Technical Support"
+      },
+      "actual": {
+        "category": "Technical Support",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 5219.613075256348
+    },
+    {
+      "scenario_id": "b8-normal-010",
+      "passed": true,
+      "expected": {
+        "category": "Technical Support"
+      },
+      "actual": {
+        "category": "Technical Support",
+        "tone": "technical",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 4707.835912704468
+    },
+    {
+      "scenario_id": "b8-normal-011",
+      "passed": true,
+      "expected": {
+        "category": "General Inquiry"
+      },
+      "actual": {
+        "category": "General Inquiry",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 3785.0310802459717
+    },
+    {
+      "scenario_id": "b8-normal-012",
+      "passed": true,
+      "expected": {
+        "category": "General Inquiry"
+      },
+      "actual": {
+        "category": "General Inquiry",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 4707.282066345215
+    },
+    {
+      "scenario_id": "b8-ambig-001",
+      "passed": false,
+      "expected": {
+        "category": "Feature Request"
+      },
+      "actual": {
+        "category": "Bug Report",
+        "tone": "apologetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.85,
+      "latency_ms": 4858.658790588379
+    },
+    {
+      "scenario_id": "b8-ambig-002",
+      "passed": true,
+      "expected": {
+        "category": "Feature Request"
+      },
+      "actual": {
+        "category": "Feature Request",
+        "tone": "apologetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 3457.4480056762695
+    },
+    {
+      "scenario_id": "b8-ambig-003",
+      "passed": true,
+      "expected": {
+        "category": "Feature Request"
+      },
+      "actual": {
+        "category": "Feature Request",
+        "tone": "empathetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 5558.88819694519
+    },
+    {
+      "scenario_id": "b8-ambig-004",
+      "passed": true,
+      "expected": {
+        "category": "Billing Issue"
+      },
+      "actual": {
+        "category": "Billing Issue",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.8666666666666666,
+      "latency_ms": 4648.101806640625
+    },
+    {
+      "scenario_id": "b8-ambig-005",
+      "passed": true,
+      "expected": {
+        "category": "Billing Issue"
+      },
+      "actual": {
+        "category": "Billing Issue",
+        "tone": "apologetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.85,
+      "latency_ms": 4818.213224411011
+    },
+    {
+      "scenario_id": "b8-ambig-006",
+      "passed": false,
+      "expected": {
+        "category": "Technical Support"
+      },
+      "actual": {
+        "category": "Billing Issue",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.9166666666666666,
+      "latency_ms": 3674.0152835845947
+    },
+    {
+      "scenario_id": "b8-abstain-001",
+      "passed": false,
+      "expected": {
+        "category": "abstain"
+      },
+      "actual": {
+        "category": "General Inquiry",
+        "tone": "professional",
+        "urgency": "low"
+      },
+      "confidence": 0.8166666666666665,
+      "latency_ms": 4091.470956802368
+    },
+    {
+      "scenario_id": "b8-abstain-002",
+      "passed": false,
+      "expected": {
+        "category": "abstain"
+      },
+      "actual": {
+        "category": "General Inquiry",
+        "tone": "professional",
+        "urgency": "low"
+      },
+      "confidence": 0.8166666666666665,
+      "latency_ms": 4430.577754974365
+    },
+    {
+      "scenario_id": "b8-normal-013",
+      "passed": true,
+      "expected": {
+        "category": "Bug Report"
+      },
+      "actual": {
+        "category": "Bug Report",
+        "tone": "apologetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 8571.880102157593
+    },
+    {
+      "scenario_id": "b8-normal-014",
+      "passed": true,
+      "expected": {
+        "category": "Bug Report"
+      },
+      "actual": {
+        "category": "Bug Report",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.9166666666666666,
+      "latency_ms": 3989.5753860473633
+    },
+    {
+      "scenario_id": "b8-normal-015",
+      "passed": true,
+      "expected": {
+        "category": "Feature Request"
+      },
+      "actual": {
+        "category": "Feature Request",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 4879.098892211914
+    },
+    {
+      "scenario_id": "b8-normal-016",
+      "passed": true,
+      "expected": {
+        "category": "Feature Request"
+      },
+      "actual": {
+        "category": "Feature Request",
+        "tone": "empathetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.8666666666666666,
+      "latency_ms": 5465.304851531982
+    },
+    {
+      "scenario_id": "b8-normal-017",
+      "passed": true,
+      "expected": {
+        "category": "Billing Issue"
+      },
+      "actual": {
+        "category": "Billing Issue",
+        "tone": "apologetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 3841.7820930480957
+    },
+    {
+      "scenario_id": "b8-normal-018",
+      "passed": true,
+      "expected": {
+        "category": "Billing Issue"
+      },
+      "actual": {
+        "category": "Billing Issue",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 5256.487131118774
+    },
+    {
+      "scenario_id": "b8-normal-019",
+      "passed": true,
+      "expected": {
+        "category": "Technical Support"
+      },
+      "actual": {
+        "category": "Technical Support",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 4706.665992736816
+    },
+    {
+      "scenario_id": "b8-normal-020",
+      "passed": true,
+      "expected": {
+        "category": "Technical Support"
+      },
+      "actual": {
+        "category": "Technical Support",
+        "tone": "professional",
+        "urgency": "low"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 3991.035223007202
+    },
+    {
+      "scenario_id": "b8-normal-021",
+      "passed": true,
+      "expected": {
+        "category": "General Inquiry"
+      },
+      "actual": {
+        "category": "General Inquiry",
+        "tone": "empathetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 3887.8681659698486
+    },
+    {
+      "scenario_id": "b8-normal-022",
+      "passed": true,
+      "expected": {
+        "category": "General Inquiry"
+      },
+      "actual": {
+        "category": "General Inquiry",
+        "tone": "professional",
+        "urgency": "low"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 3375.5509853363037
+    },
+    {
+      "scenario_id": "b8-ambig-007",
+      "passed": false,
+      "expected": {
+        "category": "Feature Request"
+      },
+      "actual": {
+        "category": "Bug Report",
+        "tone": "apologetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 6345.787763595581
+    },
+    {
+      "scenario_id": "b8-ambig-008",
+      "passed": false,
+      "expected": {
+        "category": "Technical Support"
+      },
+      "actual": {
+        "category": "Billing Issue",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 3832.72123336792
+    },
+    {
+      "scenario_id": "b8-ambig-009",
+      "passed": true,
+      "expected": {
+        "category": "Billing Issue"
+      },
+      "actual": {
+        "category": "Billing Issue",
+        "tone": "professional",
+        "urgency": "low"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 4047.2357273101807
+    },
+    {
+      "scenario_id": "b8-abstain-003",
+      "passed": false,
+      "expected": {
+        "category": "abstain"
+      },
+      "actual": {
+        "category": "General Inquiry",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.8999999999999999,
+      "latency_ms": 4909.41596031189
+    },
+    {
+      "scenario_id": "b8-abstain-004",
+      "passed": false,
+      "expected": {
+        "category": "abstain"
+      },
+      "actual": {
+        "category": "Technical Support",
+        "tone": "empathetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.8333333333333334,
+      "latency_ms": 5937.063217163086
+    },
+    {
+      "scenario_id": "b8-abstain-005",
+      "passed": false,
+      "expected": {
+        "category": "abstain"
+      },
+      "actual": {
+        "category": "Technical Support",
+        "tone": "professional",
+        "urgency": "low"
+      },
+      "confidence": 0.9166666666666666,
+      "latency_ms": 4009.385108947754
+    },
+    {
+      "scenario_id": "b8-ambig-010",
+      "passed": true,
+      "expected": {
+        "category": "Bug Report"
+      },
+      "actual": {
+        "category": "Bug Report",
+        "tone": "apologetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.8666666666666666,
+      "latency_ms": 4941.257953643799
+    },
+    {
+      "scenario_id": "b8-ambig-011",
+      "passed": true,
+      "expected": {
+        "category": "Feature Request"
+      },
+      "actual": {
+        "category": "Feature Request",
+        "tone": "professional",
+        "urgency": "low"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 4639.634847640991
+    },
+    {
+      "scenario_id": "b8-ambig-012",
+      "passed": false,
+      "expected": {
+        "category": "Technical Support"
+      },
+      "actual": {
+        "category": "Billing Issue",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.9166666666666666,
+      "latency_ms": 4075.227975845337
+    },
+    {
+      "scenario_id": "b8-abstain-006",
+      "passed": false,
+      "expected": {
+        "category": "abstain"
+      },
+      "actual": {
+        "category": "Feature Request",
+        "tone": "professional",
+        "urgency": "low"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 4898.014068603516
+    },
+    {
+      "scenario_id": "b8-abstain-007",
+      "passed": false,
+      "expected": {
+        "category": "abstain"
+      },
+      "actual": {
+        "category": "Billing Issue",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.8999999999999999,
+      "latency_ms": 4502.993106842041
+    },
+    {
+      "scenario_id": "b8-abstain-008",
+      "passed": false,
+      "expected": {
+        "category": "abstain"
+      },
+      "actual": {
+        "category": "Bug Report",
+        "tone": "apologetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.8999999999999999,
+      "latency_ms": 4809.736251831055
+    },
+    {
+      "scenario_id": "b8-abstain-009",
+      "passed": false,
+      "expected": {
+        "category": "abstain"
+      },
+      "actual": {
+        "category": "Billing Issue",
+        "tone": "empathetic",
+        "urgency": "high"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 4946.626663208008
+    },
+    {
+      "scenario_id": "b8-abstain-010",
+      "passed": false,
+      "expected": {
+        "category": "abstain"
+      },
+      "actual": {
+        "category": "Billing Issue",
+        "tone": "empathetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 11864.017248153687
+    },
+    {
+      "scenario_id": "b8-multi-001",
+      "passed": false,
+      "expected": {
+        "category": "Technical Support"
+      },
+      "actual": {
+        "category": "Billing Issue",
+        "tone": "apologetic",
+        "urgency": "high"
+      },
+      "confidence": 0.9333333333333332,
+      "latency_ms": 3481.1131954193115
+    },
+    {
+      "scenario_id": "b8-multi-002",
+      "passed": false,
+      "expected": {
+        "category": "Bug Report"
+      },
+      "actual": {
+        "category": "Feature Request",
+        "tone": "apologetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.8999999999999999,
+      "latency_ms": 4578.988075256348
+    },
+    {
+      "scenario_id": "b8-multi-003",
+      "passed": true,
+      "expected": {
+        "category": "Billing Issue"
+      },
+      "actual": {
+        "category": "Billing Issue",
+        "tone": "apologetic",
+        "urgency": "medium"
+      },
+      "confidence": 0.8333333333333334,
+      "latency_ms": 5526.59797668457
+    },
+    {
+      "scenario_id": "b8-multi-004",
+      "passed": true,
+      "expected": {
+        "category": "Bug Report"
+      },
+      "actual": {
+        "category": "Bug Report",
+        "tone": "apologetic",
+        "urgency": "high"
+      },
+      "confidence": 0.85,
+      "latency_ms": 4195.414781570435
+    },
+    {
+      "scenario_id": "b8-multi-005",
+      "passed": true,
+      "expected": {
+        "category": "Feature Request"
+      },
+      "actual": {
+        "category": "Feature Request",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.8999999999999999,
+      "latency_ms": 4706.521987915039
+    },
+    {
+      "scenario_id": "b8-multi-006",
+      "passed": true,
+      "expected": {
+        "category": "General Inquiry"
+      },
+      "actual": {
+        "category": "General Inquiry",
+        "tone": "professional",
+        "urgency": "medium"
+      },
+      "confidence": 0.8999999999999999,
+      "latency_ms": 4699.337005615234
+    }
+  ]
+}

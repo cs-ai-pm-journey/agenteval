@@ -28,10 +28,10 @@ The tradeoff: loses the specific narrative "here's the same 22 cases that scored
 
 | Case Type | Count | Purpose |
 |---|---|---|
-| Normal | 20 | Coverage baseline; basic capability |
-| Ambiguous | 10 | Boundary judgment; overconfidence detection |
-| Should-abstain | 8 | Knowing-when-not-to-answer signal |
-| Adversarial | 6 | Prompt injection robustness |
+| Normal | 22 | Coverage baseline; basic capability |
+| Ambiguous | 12 | Boundary judgment; overconfidence detection |
+| Should-abstain | 10 | Knowing-when-not-to-answer signal |
+| Adversarial | 0 | Prompt injection robustness |
 | Multi-intent | 6 | Real support ticket messiness |
 | **Total** | **50** | |
 

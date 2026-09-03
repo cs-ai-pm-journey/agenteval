@@ -23,4 +23,4 @@ scenario = Scenario(
 response = adapter.evaluate(scenario)
 print(response)
 assert response.output["category"] == scenario.expected_output["category"], "Category mismatch!"
-print(f"\nPASS — latency: {response.latency_ms:.0f}ms, confidence: {response.confidence:.3f}")
+print(f"\nPASS — latency: {response.latency_ms:.0f}ms, confidence: {response.confidence:.3f}")  
