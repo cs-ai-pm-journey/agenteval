@@ -56,6 +56,18 @@ calibration failure -- it was guaranteed by the system's design before any
 ticket was ever sent, which changes the finding from "model failed to abstain"
 to "system was never given the ability to."
 
+**Resolved (2026-09-03), against `cs-ai-pm-journey/Block-8`'s own source:**
+no. `classifier.js`'s prompt hard-codes exactly five categories — Bug Report,
+Feature Request, Billing Issue, Technical Support, General Inquiry — and
+instructs the model to "Classify this support ticket into ONE category," with
+no abstain/escalate/none option offered anywhere in the prompt or the output
+schema. The 0/10 (0/80 across pass^8) wasn't the model declining to develop
+good abstention judgment — it was structurally impossible for it to output
+anything else. This is a spec gap, not a model limitation: the fix in "What
+I'd Change About Block 8 Copilot" above (a deterministic pre-classifier gate)
+is the correct one, not a fallback for a limitation that turned out to be
+unfixable by better prompting.
+
 **Billing/Support boundary: deterministic bias toward Billing Issue.**
 b8-ambig-008, b8-ambig-012, b8-multi-001 all expected Technical Support, all
 landed on Billing Issue, all 0/8 -- a repeatable, directional bias, not noise.

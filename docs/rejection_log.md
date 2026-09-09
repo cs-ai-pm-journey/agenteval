@@ -33,6 +33,11 @@ ticket was sent. That's a different diagnosis (spec gap, not model
 gap) and would need checking Copilot's actual category list/prompt
 before claiming the fix above is even the right one.
 
+**Resolved (2026-09-03):** checked `classifier.js` in
+`cs-ai-pm-journey/Block-8` directly -- the prompt hard-codes exactly five
+categories with no abstain/escalate option. Spec gap confirmed, not model
+gap. The fix above (a deterministic gate ahead of the LLM call) stands.
+
 **Status:** documented, not built. Treating this as a deliberate,
 scoped decision rather than folding an unplanned Copilot rebuild into
 B10's actual deliverable (the harness itself).
