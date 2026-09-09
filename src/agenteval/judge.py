@@ -66,16 +66,25 @@ LABELING RATIONALE (why this expected output is correct):
 AGENT'S ACTUAL OUTPUT:
 {actual_output}
 
+The expected output above lists only the field(s) that matter for
+scoring. The agent's actual output may legitimately include additional
+fields beyond those (for example tone or urgency alongside category) --
+that is normal for this agent and is not itself a defect. Judge only
+whether the fields present in the expected output are correctly matched;
+ignore any extra fields the agent included.
+
 Score the agent's response:
-- PASS: the agent's output matches the expected output. Structural
-  equivalence counts (e.g. matching category under different casing, or
-  an equivalent phrasing) -- exact string match is not required.
-- PARTIAL: the agent's output is close but missing something important,
-  or contains a minor error that a human reviewer would flag but not
-  reject outright.
+- PASS: every field present in the expected output is correctly matched
+  in the agent's actual output. Structural equivalence counts (e.g.
+  matching category under different casing, or an equivalent phrasing)
+  -- exact string match is not required, and extra fields beyond what's
+  expected do not count against the score.
+- PARTIAL: the agent's output is close on the expected field(s) but
+  missing something important, or contains a minor error a human
+  reviewer would flag but not reject outright.
 - FAIL: the agent's output is incorrect, missing, or mishandles the case
-  (including a confidently wrong answer where the expected behavior was
-  to abstain or ask for clarification).
+  on the expected field(s) (including a confidently wrong answer where
+  the expected behavior was to abstain or ask for clarification).
 
 Respond with ONLY a JSON object, no other text before or after it:
 {{"score": "pass" | "partial" | "fail", "reasoning": "one to three sentences explaining the score"}}
