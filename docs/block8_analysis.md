@@ -82,13 +82,43 @@ got Feature Request). Both deterministic, both wrong, in opposite directions --
 this reads as a specification gap (the line between "broken" and "missing" is
 underspecified for Copilot) rather than a systematic lean either way.
 
-## Predictions vs Actuals
+## Predictions vs Actuals: A Methodology Lapse Disclosed
 
 No Week 1 prediction sheet was ever recorded (`prediction-sheet.md` was empty
 going into this block -- flagged as an open thread on Thursday). Rather than
 backfill predictions after seeing the results, this section documents that gap
-honestly: there is nothing to compare actuals against for this run. Judge
-agreement rate is still TBD for Week 3.
+honestly: there is nothing to compare pre-registered predictions against for
+this run. That is a process failure worth naming plainly rather than quietly
+working around -- a pass rate reported without a prior prediction to check it
+against loses its main defense against unconscious goalpost-moving after the
+fact. The fix for future blocks is mechanical: the prediction sheet gets
+filled in and committed before the first coverage run, not after.
+
+**Week 3 judge validation, which this section originally deferred, is now
+complete.** The LLM judge (Claude Sonnet, cross-model) was run against all 50
+real coverage-run responses and independently compared against human labels
+for the same 50 cases. Result: 84.0% raw agreement, Cohen's kappa = 0.654
+("substantial" agreement on the standard interpretation scale). The 8
+disagreements are concentrated entirely in the `ambiguous` and `multi_intent`
+case types -- exactly where genuine judgment-call variance is expected, not
+in `normal` (22/22 agreement) or `should_abstain` (10/10 agreement once a
+labeling error in the first human-labeling pass was caught and corrected --
+see below).
+
+**A second methodology lapse, caught before it reached this document:** the
+first pass at human labeling scored all 10 `should_abstain` cases as `pass`,
+even though the accompanying reasoning text argued the opposite (e.g. "empty
+ticket = abstain" as a reason the case should fail, not pass). Uncorrected,
+this would have produced a Cohen's kappa of 0.060 -- "slight," barely above
+chance -- and made the judge look far less reliable than it is. This was
+caught by checking whether the reasoning text actually supported the score
+before accepting the labels as final, and corrected before this report was
+written. It is disclosed here for the same reason the missing prediction
+sheet is disclosed above: a validation pipeline is only as trustworthy as
+its willingness to show its own mistakes, not just the system under test's.
+Full disagreement detail (judge reasoning vs. human reasoning, per case) is
+in `results/block8/disagreements.jsonl`; the full methodology and numbers are
+in `docs/judge_validation_report.md`.
 
 ## What I'd Change About Block 8 Copilot
 
