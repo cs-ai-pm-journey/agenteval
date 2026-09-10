@@ -1,0 +1,80 @@
+{
+  "run_id": "expense-router-reliability-2026-09-10",
+  "k": 8,
+  "n_scenarios": 10,
+  "stable_pass": 9,
+  "stable_fail": 1,
+  "flaky": 0,
+  "per_scenario": [
+    {
+      "scenario_id": "exp-ambig-001",
+      "case_type": "ambiguous",
+      "k": 8,
+      "n_passed": 8,
+      "pass_k": true
+    },
+    {
+      "scenario_id": "exp-ambig-002",
+      "case_type": "ambiguous",
+      "k": 8,
+      "n_passed": 8,
+      "pass_k": true
+    },
+    {
+      "scenario_id": "exp-abstain-001",
+      "case_type": "should_abstain",
+      "k": 8,
+      "n_passed": 8,
+      "pass_k": true
+    },
+    {
+      "scenario_id": "exp-abstain-002",
+      "case_type": "should_abstain",
+      "k": 8,
+      "n_passed": 8,
+      "pass_k": true
+    },
+    {
+      "scenario_id": "exp-abstain-003",
+      "case_type": "should_abstain",
+      "k": 8,
+      "n_passed": 8,
+      "pass_k": true
+    },
+    {
+      "scenario_id": "exp-abstain-004",
+      "case_type": "should_abstain",
+      "k": 8,
+      "n_passed": 8,
+      "pass_k": true
+    },
+    {
+      "scenario_id": "exp-multi-001",
+      "case_type": "multi_intent",
+      "k": 8,
+      "n_passed": 8,
+      "pass_k": true
+    },
+    {
+      "scenario_id": "exp-multi-002",
+      "case_type": "multi_intent",
+      "k": 8,
+      "n_passed": 0,
+      "pass_k": false
+    },
+    {
+      "scenario_id": "exp-adv-001",
+      "case_type": "adversarial",
+      "k": 8,
+      "n_passed": 8,
+      "pass_k": true
+    },
+    {
+      "scenario_id": "exp-adv-002",
+      "case_type": "adversarial",
+      "k": 8,
+      "n_passed": 8,
+      "pass_k": true
+    }
+  ]
+}

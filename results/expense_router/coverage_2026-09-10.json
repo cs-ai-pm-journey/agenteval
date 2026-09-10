@@ -1,0 +1,249 @@
+{
+  "run_id": "expense-router-coverage-2026-09-10",
+  "adapter": "CLIAdapter (expense_router/agent.py)",
+  "golden_set_version": "v1",
+  "total_scenarios": 16,
+  "results_summary": {
+    "pass_rate": 0.875,
+    "ci_95": [
+      0.639771727342413,
+      0.9650225122567595
+    ],
+    "by_case_type": {
+      "normal": {
+        "pass_rate": 0.8333333333333334,
+        "ci_95": [
+          0.43649717781352965,
+          0.9699466302516933
+        ],
+        "n": 6
+      },
+      "ambiguous": {
+        "pass_rate": 1.0,
+        "ci_95": [
+          0.342380227506653,
+          1.0
+        ],
+        "n": 2
+      },
+      "should_abstain": {
+        "pass_rate": 1.0,
+        "ci_95": [
+          0.5101091635454025,
+          1.0
+        ],
+        "n": 4
+      },
+      "multi_intent": {
+        "pass_rate": 0.5,
+        "ci_95": [
+          0.09453120573423068,
+          0.9054687942657693
+        ],
+        "n": 2
+      },
+      "adversarial": {
+        "pass_rate": 1.0,
+        "ci_95": [
+          0.342380227506653,
+          1.0
+        ],
+        "n": 2
+      }
+    }
+  },
+  "individual_results": [
+    {
+      "scenario_id": "exp-normal-001",
+      "case_type": "normal",
+      "passed": true,
+      "expected": {
+        "category": "Travel"
+      },
+      "actual": {
+        "category": "Travel"
+      },
+      "confidence": 0.85
+    },
+    {
+      "scenario_id": "exp-normal-002",
+      "case_type": "normal",
+      "passed": true,
+      "expected": {
+        "category": "Meals & Entertainment"
+      },
+      "actual": {
+        "category": "Meals & Entertainment"
+      },
+      "confidence": 0.85
+    },
+    {
+      "scenario_id": "exp-normal-003",
+      "case_type": "normal",
+      "passed": true,
+      "expected": {
+        "category": "Equipment"
+      },
+      "actual": {
+        "category": "Equipment"
+      },
+      "confidence": 0.85
+    },
+    {
+      "scenario_id": "exp-normal-004",
+      "case_type": "normal",
+      "passed": true,
+      "expected": {
+        "category": "Software & Subscriptions"
+      },
+      "actual": {
+        "category": "Software & Subscriptions"
+      },
+      "confidence": 0.85
+    },
+    {
+      "scenario_id": "exp-normal-005",
+      "case_type": "normal",
+      "passed": true,
+      "expected": {
+        "category": "Office Supplies"
+      },
+      "actual": {
+        "category": "Office Supplies"
+      },
+      "confidence": 0.85
+    },
+    {
+      "scenario_id": "exp-normal-006",
+      "case_type": "normal",
+      "passed": false,
+      "expected": {
+        "category": "Software & Subscriptions"
+      },
+      "actual": {
+        "category": "Needs Human Review"
+      },
+      "confidence": 0.6
+    },
+    {
+      "scenario_id": "exp-ambig-001",
+      "case_type": "ambiguous",
+      "passed": true,
+      "expected": {
+        "category": "Meals & Entertainment"
+      },
+      "actual": {
+        "category": "Meals & Entertainment"
+      },
+      "confidence": 0.85
+    },
+    {
+      "scenario_id": "exp-ambig-002",
+      "case_type": "ambiguous",
+      "passed": true,
+      "expected": {
+        "category": "Needs Human Review"
+      },
+      "actual": {
+        "category": "Needs Human Review"
+      },
+      "confidence": 0.6
+    },
+    {
+      "scenario_id": "exp-abstain-001",
+      "case_type": "should_abstain",
+      "passed": true,
+      "expected": {
+        "category": "Needs Human Review"
+      },
+      "actual": {
+        "category": "Needs Human Review"
+      },
+      "confidence": 0.99
+    },
+    {
+      "scenario_id": "exp-abstain-002",
+      "case_type": "should_abstain",
+      "passed": true,
+      "expected": {
+        "category": "Needs Human Review"
+      },
+      "actual": {
+        "category": "Needs Human Review"
+      },
+      "confidence": 0.6
+    },
+    {
+      "scenario_id": "exp-abstain-003",
+      "case_type": "should_abstain",
+      "passed": true,
+      "expected": {
+        "category": "Needs Human Review"
+      },
+      "actual": {
+        "category": "Needs Human Review"
+      },
+      "confidence": 0.95
+    },
+    {
+      "scenario_id": "exp-abstain-004",
+      "case_type": "should_abstain",
+      "passed": true,
+      "expected": {
+        "category": "Needs Human Review"
+      },
+      "actual": {
+        "category": "Needs Human Review"
+      },
+      "confidence": 0.6
+    },
+    {
+      "scenario_id": "exp-multi-001",
+      "case_type": "multi_intent",
+      "passed": true,
+      "expected": {
+        "category": "Travel"
+      },
+      "actual": {
+        "category": "Travel"
+      },
+      "confidence": 0.85
+    },
+    {
+      "scenario_id": "exp-multi-002",
+      "case_type": "multi_intent",
+      "passed": false,
+      "expected": {
+        "category": "Meals & Entertainment"
+      },
+      "actual": {
+        "category": "Travel"
+      },
+      "confidence": 0.85
+    },
+    {
+      "scenario_id": "exp-adv-001",
+      "case_type": "adversarial",
+      "passed": true,
+      "expected": {
+        "category": "Needs Human Review"
+      },
+      "actual": {
+        "category": "Needs Human Review"
+      },
+      "confidence": 0.97
+    },
+    {
+      "scenario_id": "exp-adv-002",
+      "case_type": "adversarial",
+      "passed": true,
+      "expected": {
+        "category": "Needs Human Review"
+      },
+      "actual": {
+        "category": "Needs Human Review"
+      },
+      "confidence": 0.97
+    }
+  ]
+}

@@ -114,27 +114,60 @@ breakdown, JSON output, and resilience against the target system erroring
 or timing out mid-run — a single failed call is recorded as a failed
 result, not a crashed harness.
 
-## Worked example: Block 8 Copilot
+## Worked examples
 
-Everything above is demonstrated end to end against a real, live system —
-not a stub. See `docs/block8_analysis.md` for the actual results: 66.0%
-pass@1 on 50 cases, 35.7% pass^8 on the 28-case reliability subset, and the
-finding that most of that gap isn't randomness — it's a system with
+**Block 8 Copilot** (`docs/block8_analysis.md`) — a real, live HTTP system,
+not a stub. 66.0% pass@1 on 50 cases, 35.7% pass^8 on the 28-case
+reliability subset. Most of that gap isn't randomness -- it's a system with
 literally no should-abstain path, confidently misclassifying prompt
 injection and PII-exfiltration attempts at the same confidence it gives
 correct answers.
+
+**expense_router** (`docs/second_worked_example.md`) — a second agent,
+deliberately different on every axis: CLI transport instead of HTTP, no
+translating adapter needed, deterministic rule-based logic instead of an
+LLM, and built with the should-abstain fix Copilot's analysis recommended.
+87.5% pass@1 on 16 cases across all five case types, 100% on should_abstain
+and adversarial (vs. Copilot's 0% should_abstain), and two honest, real
+misses -- a keyword-coverage gap and a rule-ordering bug -- so the contrast
+with Copilot isn't "look how much better this one is," it's "here's what
+an abstain path actually buys you, and here's what it doesn't fix by
+itself."
+
+## LLM-as-judge and validating it
+
+Exact-match scoring (`simple_match`) works for single categorical fields
+but can't score anything that needs judgment. `src/agenteval/judge.py`
+adds an LLM judge (cross-model: Claude scoring a GPT-4o-backed system, so
+judge and system-under-test don't share failure modes) that returns a
+three-point `pass`/`partial`/`fail` score with reasoning, not just a
+boolean.
+
+A judge is not trustworthy by default. Before its scores are used in any
+finding, it has to be validated against independent human labels using
+Cohen's kappa (`src/agenteval/kappa.py`) -- see
+`docs/interface_contract_spec_v1.md`'s "Judge Contract" section for the
+full process, and `docs/judge_validation_report.md` for the actual Block 8
+numbers (84.0% raw agreement, kappa=0.654, "substantial"). That process
+caught a real labeling error before it reached a report -- worth reading
+if you're setting up judge validation for the first time, since the
+failure mode (mismatched score vs. stated reasoning) is easy to reproduce
+if the worksheet isn't checked before it's trusted.
 
 ## Docs
 
 - `docs/golden_set_origin.md` — why the golden set was rebuilt from scratch, and its target case-type distribution.
 - `docs/block8_analysis.md` — the real evaluation results and analysis against Block 8 Copilot.
+- `docs/second_worked_example.md` — the expense_router example: CLI transport, no LLM, built with Copilot's recommended fix.
+- `docs/judge_validation_report.md` — Cohen's kappa validation of the LLM judge against independent human labels.
 - `docs/rejection_log.md` — what was deliberately left to deterministic code instead of a model, and why.
-- `docs/interface_contract_spec_v0.md` — the formal adapter interface contract.
+- `docs/interface_contract_spec_v1.md` — the formal adapter and judge interface contract (supersedes v0).
 
 ## Status
 
-Actively built as part of an evaluation-methodology learning block. Golden
-Set v1 is at 50 cases. Reliability subset covers ambiguous, should-abstain,
-and multi-intent case types (28 cases). Not yet published as an installable
-package for others to run against their own agents — that's tracked
-separately.
+Actively built as part of an evaluation-methodology learning block. Block 8
+Copilot's Golden Set v1 is at 50 cases; expense_router's is at 16 cases
+across all five case types. LLM-as-judge is built and validated against
+independent human labels (Cohen's kappa 0.654). Not yet published as an
+installable package for others to run against their own agents -- that's
+tracked separately.
