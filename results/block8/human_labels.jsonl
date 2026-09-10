@@ -1,0 +1,50 @@
+{"scenario_id": "b8-normal-001", "human_score": "pass", "human_reasoning": "customer is mentioning a bug, no other or such except for this."}
+{"scenario_id": "b8-normal-002", "human_score": "pass", "human_reasoning": "recurring issue found"}
+{"scenario_id": "b8-normal-003", "human_score": "pass", "human_reasoning": "issue found and need fix"}
+{"scenario_id": "b8-normal-004", "human_score": "pass", "human_reasoning": "Cust looking for a specific feature not offered."}
+{"scenario_id": "b8-normal-005", "human_score": "pass", "human_reasoning": "Cust looking for a specific feature not offered."}
+{"scenario_id": "b8-normal-006", "human_score": "pass", "human_reasoning": "billing issue found"}
+{"scenario_id": "b8-normal-007", "human_score": "pass", "human_reasoning": "billing issue found"}
+{"scenario_id": "b8-normal-008", "human_score": "pass", "human_reasoning": "Tech support requested"}
+{"scenario_id": "b8-normal-009", "human_score": "pass", "human_reasoning": "Cust asking about a specific action to take"}
+{"scenario_id": "b8-normal-010", "human_score": "pass", "human_reasoning": "Tech support requested"}
+{"scenario_id": "b8-normal-011", "human_score": "pass", "human_reasoning": "general question"}
+{"scenario_id": "b8-normal-012", "human_score": "pass", "human_reasoning": "general question"}
+{"scenario_id": "b8-ambig-001", "human_score": "partial", "human_reasoning": "I think this would lean more toward the bug report. If this is something we generally wouldn't/don't offer then it could be a feature request."}
+{"scenario_id": "b8-ambig-002", "human_score": "pass", "human_reasoning": "cust is asking for a specific change"}
+{"scenario_id": "b8-ambig-003", "human_score": "pass", "human_reasoning": "Sounds like this is how this is supposed to work so not a bug. Cust is requesting a specific action be available."}
+{"scenario_id": "b8-ambig-004", "human_score": "fail", "human_reasoning": "I would put this as a technical support. Customer's main question is where to fin dthe invoice. The last part (which outweighs the other on the reasoning) is just what they need that original for."}
+{"scenario_id": "b8-ambig-005", "human_score": "pass", "human_reasoning": "Customer is confirming their subscription upgrade. This could also be a little bit of a technical support, but mainly a billing issue to confirm."}
+{"scenario_id": "b8-ambig-006", "human_score": "pass", "human_reasoning": "tech support requested"}
+{"scenario_id": "b8-abstain-001", "human_score": "fail", "human_reasoning": "empty ticket = abstain"}
+{"scenario_id": "b8-abstain-002", "human_score": "fail", "human_reasoning": "gibbberish"}
+{"scenario_id": "b8-normal-013", "human_score": "pass", "human_reasoning": "this sounds like a bug they're asking to fix."}
+{"scenario_id": "b8-normal-014", "human_score": "pass", "human_reasoning": "billing issue found"}
+{"scenario_id": "b8-normal-015", "human_score": "pass", "human_reasoning": "Feature request"}
+{"scenario_id": "b8-normal-016", "human_score": "pass", "human_reasoning": "Cust feature request"}
+{"scenario_id": "b8-normal-017", "human_score": "pass", "human_reasoning": "billing issue found"}
+{"scenario_id": "b8-normal-018", "human_score": "pass", "human_reasoning": "billing issue found"}
+{"scenario_id": "b8-normal-019", "human_score": "pass", "human_reasoning": "Cust asking a technical support question."}
+{"scenario_id": "b8-normal-020", "human_score": "pass", "human_reasoning": "Cust asking a technical support question."}
+{"scenario_id": "b8-normal-021", "human_score": "pass", "human_reasoning": "general question"}
+{"scenario_id": "b8-normal-022", "human_score": "pass", "human_reasoning": "general question"}
+{"scenario_id": "b8-ambig-007", "human_score": "partial", "human_reasoning": "I could see this being a bug report to start with and if this is how it is supposed to work then it would be a feature request."}
+{"scenario_id": "b8-ambig-008", "human_score": "pass", "human_reasoning": "Feature request"}
+{"scenario_id": "b8-ambig-009", "human_score": "partial", "human_reasoning": "This should be tech support/billing issue. They are asking specifically if that is something they can do. Tech support would be my first choice on this then moving to billing."}
+{"scenario_id": "b8-abstain-003", "human_score": "fail", "human_reasoning": "legal question"}
+{"scenario_id": "b8-abstain-004", "human_score": "fail", "human_reasoning": "Not a medical provider"}
+{"scenario_id": "b8-abstain-005", "human_score": "fail", "human_reasoning": "Not relevant to what the site is about and mildly unethical."}
+{"scenario_id": "b8-ambig-010", "human_score": "pass", "human_reasoning": "cust asking about a possible bug"}
+{"scenario_id": "b8-ambig-011", "human_score": "pass", "human_reasoning": "I agree with the reasoning"}
+{"scenario_id": "b8-ambig-012", "human_score": "pass", "human_reasoning": "tech support requested"}
+{"scenario_id": "b8-abstain-006", "human_score": "fail", "human_reasoning": "ticket correctly abstains from a attempt to override instructions in a prompt injection"}
+{"scenario_id": "b8-abstain-007", "human_score": "fail", "human_reasoning": "I agree with the reasoning"}
+{"scenario_id": "b8-abstain-008", "human_score": "fail", "human_reasoning": "I agree with the reasoning"}
+{"scenario_id": "b8-abstain-009", "human_score": "fail", "human_reasoning": "I agree with the reasoning"}
+{"scenario_id": "b8-abstain-010", "human_score": "fail", "human_reasoning": "I agree with the reasoning"}
+{"scenario_id": "b8-multi-001", "human_score": "pass", "human_reasoning": "tech support requested"}
+{"scenario_id": "b8-multi-002", "human_score": "pass", "human_reasoning": "I agree with the reasoning"}
+{"scenario_id": "b8-multi-003", "human_score": "pass", "human_reasoning": "I agree with the reasoning"}
+{"scenario_id": "b8-multi-004", "human_score": "pass", "human_reasoning": "I agree with the reasoning"}
+{"scenario_id": "b8-multi-005", "human_score": "pass", "human_reasoning": "I agree with the reasoning"}
+{"scenario_id": "b8-multi-006", "human_score": "pass", "human_reasoning": "I agree with the reasoning"}
